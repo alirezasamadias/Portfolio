@@ -40,7 +40,7 @@ document.onreadystatechange = ()=>{
         siteLoaderEl.style.opacity = "0";
         siteLoaderEl.style.visibility = "hidden";
         bodyEl.style.visibility = "visible";
-    };
+    }
 };
 
 // header slide
@@ -53,7 +53,7 @@ const headerFix = ()=>{
             headerEl.style.top = '0';
         } else if (homeEl.getBoundingClientRect().top === 0){
             headerEl.style.top = `-${headerEl.offsetHeight}px`;
-        };
+        }
     });
 };
 // header set max-width:768
@@ -68,15 +68,15 @@ const headerSlide = ()=>{
                 headerEl.style.top = `-${headerEl.offsetHeight}px`;
             } else {
                 headerEl.style.top = '0';
-            };
+            }
 
             primaryScroll = scrollNow;
-        };
+        }
 
         // debug
         if (menuEl.classList.contains('show-menu')){
             headerEl.style.top = '0';
-        };
+        }
     });
 
     // debug
@@ -84,7 +84,7 @@ const headerSlide = ()=>{
     window.addEventListener('scroll',()=>{
         if (homeEl.getBoundingClientRect().top === 0){
             headerEl.style.top = '0';
-        };
+        }
     });
 };
 // by responsive
@@ -92,14 +92,14 @@ if (window.innerWidth <= 768){
     headerSlide();
 } else {
     headerFix();
-};
+}
 // by resize
 window.addEventListener('resize',()=>{
     if (window.innerWidth <= 768){
         headerSlide();
     } else {
         headerFix();
-    };
+    }
 });
 
 // menu item target
@@ -111,9 +111,9 @@ window.addEventListener('scroll',()=>{
                     item.classList.add('light');
                 } else {
                     item.classList.remove('light');
-                };
+                }
             });
-        };
+        }
     });
 });
 
@@ -136,7 +136,7 @@ const changBackground = setInterval(()=>{
     num++;
     if(num === backgrounds.length - 1){
         clearInterval(changBackground);
-    };
+    }
     homeEl.style.backgroundImage = `url(Images/${backgrounds[num]})`;
 },1000);
 
@@ -146,7 +146,7 @@ showElements.forEach((showElement)=>{
     window.addEventListener('scroll',()=>{
         if(showElement.parentElement.getBoundingClientRect().top <= window.innerHeight){
             showElement.style.display = 'block';
-        };
+        }
     });
 });
 
@@ -163,7 +163,7 @@ galleryImages.forEach((galleryImage)=>{
                 galleryImage.classList.remove('show_rotate');
                 galleryImage.parentElement.classList.remove('parent-show_rotate');
             },1200);
-        };
+        }
     });
 });
 
@@ -172,7 +172,7 @@ const setItem = ()=>{
     for (const slideItem of slideItems) {
         slideItem.style.visibility = 'hidden';
         slideItem.style.opacity = 0;
-    };
+    }
     setTimeout(()=>{
         slideItems[item].style.visibility = 'visible';
         slideItems[item].style.opacity = 1;
@@ -183,7 +183,7 @@ const changeItem = setInterval(()=>{
     item++;
     if (item >= slideItems.length){
         item = 0;
-    };
+    }
     setItem();
 },7000);
 
@@ -194,7 +194,7 @@ const stopChangeItem = ()=>{
             item++;
             if (item >= slideItems.length){
                 item = 0;
-            };
+            }
             setItem();
         },7000);
     },7000);
@@ -205,7 +205,7 @@ nextBtn.addEventListener('click',()=>{
     item++;
     if (item >= slideItems.length){
         item = 0;
-    };
+    }
     setItem();
     stopChangeItem();
 });
@@ -213,7 +213,7 @@ prevBtn.addEventListener('click',()=>{
     item--;
     if (item < 0){
         item = slideItems.length - 1;
-    };
+    }
     setItem();
     stopChangeItem();
 });
@@ -229,7 +229,7 @@ const counter = (elementId , endNum , numPlus , interval) => {
         if (number >= endNum) {
             clearInterval(setNumber);
             number = endNum;
-        };
+        }
 
         document.getElementById(elementId).innerHTML = number;
     },interval);
@@ -239,7 +239,7 @@ window.addEventListener('scroll',()=>{
         counter('projects',112,1,35);
         counter('experience',3265,5,1);
         counter('clients',47,1,80);
-    };
+    }
 });
 
 // form
@@ -272,6 +272,6 @@ window.addEventListener('scroll',()=>{
     } else {
         scrollUpEl.style.display = 'block';
         scrollUpEl.classList.remove('scroll-up-hide');
-    };
+    }
 });
 // THE END
