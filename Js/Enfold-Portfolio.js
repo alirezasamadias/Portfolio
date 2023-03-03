@@ -21,12 +21,13 @@ const galleryImages = document.querySelectorAll('.gallery-img');
 const informEl = document.querySelector('.about-inform');
 const informNumEl = document.querySelector('.inform-num');
 // slider
-const slideItems = document.querySelectorAll('.slider-item');
+const slideItems = document.querySelectorAll('.slide-item');
 const nextBtn = document.querySelector('.btn-next');
 const prevBtn = document.querySelector('.btn-prev');
 // form
 const formEl = document.querySelector('.contact-form');
 const formItems = document.querySelectorAll('.form-item:not(.input_submit)');
+const formSubmit = document.querySelector('input[type="submit"]');
 // show scroll up page
 const scrollUpEl = document.querySelector('.scroll-up-page');
 
@@ -34,7 +35,6 @@ const scrollUpEl = document.querySelector('.scroll-up-page');
 document.onreadystatechange = ()=>{
     if (document.readyState !== "complete") {
         bodyEl.style.visibility = "hidden";
-        siteLoaderEl.style.display = "block";
         siteLoaderEl.style.visibility = "visible";
     } else {
         siteLoaderEl.style.opacity = "0";
@@ -170,12 +170,10 @@ galleryImages.forEach((galleryImage)=>{
 // slider
 const setItem = ()=>{
     for (const slideItem of slideItems) {
-        slideItem.style.visibility = 'hidden';
-        slideItem.style.opacity = 0;
+        slideItem.classList.remove('show-slide');
     }
     setTimeout(()=>{
-        slideItems[item].style.visibility = 'visible';
-        slideItems[item].style.opacity = 1;
+        slideItems[item].classList.add('show-slide');
     },500);
 };
 
@@ -187,19 +185,6 @@ const changeItem = setInterval(()=>{
     setItem();
 },7000);
 
-const stopChangeItem = ()=>{
-    clearInterval(changeItem);
-    setTimeout(()=>{
-        setInterval(()=>{
-            item++;
-            if (item >= slideItems.length){
-                item = 0;
-            }
-            setItem();
-        },7000);
-    },7000);
-};
-
 let item = 0;
 nextBtn.addEventListener('click',()=>{
     item++;
@@ -207,7 +192,6 @@ nextBtn.addEventListener('click',()=>{
         item = 0;
     }
     setItem();
-    stopChangeItem();
 });
 prevBtn.addEventListener('click',()=>{
     item--;
@@ -215,7 +199,6 @@ prevBtn.addEventListener('click',()=>{
         item = slideItems.length - 1;
     }
     setItem();
-    stopChangeItem();
 });
 
 // inform contour
@@ -245,10 +228,21 @@ window.addEventListener('scroll',()=>{
 // form
 // form valid
 formItems.forEach((formItem)=>{
-    formItem.addEventListener('keyup',()=>{
-        formItem.classList.add('input-target');
+    formSubmit.addEventListener('click',(e)=>{
+        if(formItem.checkValidity()){
+            formItem.style.borderColor = "#239201";
+        } else{
+            formItem.style.borderColor = "#c80303";
+        }
+
+        formItem.addEventListener('keyup',()=>{
+            if(formItem.checkValidity()){
+                formItem.style.borderColor = "#239201";
+            }
+        });
     });
 });
+
 // form hide
 formEl.addEventListener('submit',(e)=>{
     e.preventDefault();
