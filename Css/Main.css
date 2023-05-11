@@ -154,8 +154,8 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: 2px solid var(--primary-color);
-    border-top: 2px solid #333;
+    border: 2px solid #333;
+    border-top: 2px solid var(--primary-color);
     animation: spin 1s linear infinite;
 }
 
