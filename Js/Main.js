@@ -47,10 +47,9 @@ document.onreadystatechange = ()=>{
         const backgrounds = ['Background-Home-01.jpg','Background-Home-02.jpg','Background-Home-03.jpg'];
         let num = 0;
         homeEl.style.backgroundImage = `url(Images/${backgrounds[num]})`;
-        const changBackground = setInterval(()=>{
-            num++;
-            if(num === backgrounds.length - 1){
-                clearInterval(changBackground);
+        setInterval(()=>{
+            if(num < backgrounds.length - 1){
+                num++;
             }
             homeEl.style.backgroundImage = `url(Images/${backgrounds[num]})`;
         },1000);
