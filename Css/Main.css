@@ -336,7 +336,7 @@ img {
 /* home */
 .home {
     min-height: 100vh;
-    background: no-repeat center center fixed;
+    background: url(../Images/Background-Home-01.jpg) no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
