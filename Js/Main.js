@@ -52,7 +52,7 @@ document.onreadystatechange = ()=>{
                 num++;
             }
             homeEl.style.backgroundImage = `url(Images/${backgrounds[num - 1]}) , url(Images/${backgrounds[num]})`;
-        },1000);
+        },500);
     }
 };
 
