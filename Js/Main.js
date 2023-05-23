@@ -243,7 +243,6 @@ for (const formItem of formItems) {
         });
     });
 };
-
 // form hide
 formEl.addEventListener('submit',(e)=>{
     e.preventDefault();
