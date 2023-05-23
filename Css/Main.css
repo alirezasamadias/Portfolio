@@ -927,17 +927,7 @@ textarea {
 
     .btn-prev,
     .btn-next {
-        padding: 5px;
-        top: 50%;
-        font-size: 36px;
-    }
-
-    .btn-next {
-        left: 95%;
-    }
-
-    .btn-prev {
-        right: 95%;
+        display: none;
     }
 
     .about-logos {
@@ -1033,12 +1023,6 @@ textarea {
         margin: unset;
         padding: 11px 13px;
         transform: scale(0.9);
-    }
-
-    .btn-prev,
-    .btn-next {
-        padding: 2px;
-        top: 65%;
     }
 
     .card-icon {
