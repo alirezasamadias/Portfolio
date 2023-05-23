@@ -48,10 +48,10 @@ document.onreadystatechange = ()=>{
         let num = 0;
         homeEl.style.backgroundImage = `url(Images/${backgrounds[num]})`;
         setInterval(()=>{
-            if(num < backgrounds.length - 1){
+            if(num < backgrounds.length){
                 num++;
             }
-            homeEl.style.backgroundImage = `url(Images/${backgrounds[num]})`;
+            homeEl.style.backgroundImage = `url(Images/${backgrounds[num - 1]}) , url(Images/${backgrounds[num]})`;
         },1000);
     }
 };
