@@ -12,7 +12,6 @@ const parts = document.querySelectorAll('.part');
 // show menu
 const menuHamburgerEl = document.querySelector('.menu-hamburger');
 const menuEl = document.querySelector('.menu');
-const menuHamburgerIcon = document.querySelector('.icon-menu');
 // show element
 const showElements = document.querySelectorAll('.show-element');
 // show element by rotate
@@ -33,15 +32,12 @@ const formSubmit = document.querySelector('input[type="submit"]');
 const scrollUpEl = document.querySelector('.scroll-up-page');
 
 // site loader
+homeEl.style.display = 'none';
 document.onreadystatechange = ()=>{
-    if (document.readyState !== "complete") {
-        bodyEl.style.visibility = 'hidden';
-        siteLoaderEl.style.visibility = 'visible';
-    } else {
-        siteLoaderEl.style.opacity = "0";
+    if (document.readyState == 'complete') {
+        siteLoaderEl.style.opacity = '0';
         siteLoaderEl.style.visibility = 'hidden';
-        bodyEl.style.visibility = 'visible';
-        homeContainer.style.display = 'flex';
+        homeEl.style.display = 'block';
 
         // home background
         const backgrounds = ['Background-Home-01.jpg','Background-Home-02.jpg','Background-Home-03.jpg'];
@@ -135,7 +131,7 @@ const showMenu = element => {
     element.addEventListener('click',()=>{
         menuEl.classList.toggle('show-menu');
         // change menu hamburger icon
-        menuHamburgerIcon.classList.toggle('icon-close');
+        menuHamburgerEl.classList.toggle('icon-close');
     });
 };
 showMenu(menuHamburgerEl);
@@ -231,14 +227,14 @@ window.addEventListener('scroll',()=>{
 for (const formItem of formItems) {
     formSubmit.addEventListener('click',(e)=>{
         if(formItem.checkValidity()){
-            formItem.style.borderColor = "#239201";
+            formItem.style.borderColor = '#239201';
         } else{
-            formItem.style.borderColor = "#c80303";
+            formItem.style.borderColor = '#c80303';
         }
 
         formItem.addEventListener('keyup',()=>{
             if(formItem.checkValidity()){
-                formItem.style.borderColor = "#239201";
+                formItem.style.borderColor = '#239201';
             }
         });
     });
