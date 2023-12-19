@@ -159,7 +159,7 @@
 /* body */
 body,
 html {
-    background-color: #000000;
+    background-color: var(--bg-color);
     scroll-behavior: smooth;
     overflow-x: hidden;
     cursor: context-menu;
@@ -170,6 +170,7 @@ html {
 
 /* tags */
 a {
+    display: inline-block;
     text-decoration: none;
     color: inherit;
 }
@@ -249,7 +250,6 @@ img::before {
 
 /* button */
 .btn {
-    display: inline-block;
     min-width: 140px;
     padding: 13px;
     border: 2.5px solid;
@@ -309,7 +309,6 @@ img::before {
 }
 
 .menu-item-link {
-    display: inline-block;
     min-width: 90px;
     border-left: 1px solid #2b2b2b;
     letter-spacing: 1px;
@@ -319,7 +318,7 @@ img::before {
     transition-duration: 0.5s;
 }
 
-.menu-item:last-child .menu-item-link{
+.menu-item:last-child .menu-item-link {
     border-right: 1px solid #2b2b2b;
 }
 
@@ -338,10 +337,6 @@ img::before {
 }
 
 /* MAIN */
-#main {
-    background-color: var(--bg-color);
-}
-
 /* home */
 .home {
     min-height: 100vh;
@@ -720,7 +715,6 @@ textarea {
 }
 
 .footer-icon {
-    display: inline-block;
     padding: 12px;
     border-radius: 50%;
     opacity: 0.5;

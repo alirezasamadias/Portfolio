@@ -37,14 +37,14 @@ document.onreadystatechange = () => {
         const backgrounds = ['Background-Home-01.jpg','Background-Home-02.jpg','Background-Home-03.jpg'];
 
         let num = 0;
-        homeEl.style.backgroundImage = `url(Images/${backgrounds[num]})`;
+        homeEl.style.backgroundImage = `url(../Images/${backgrounds[num]})`;
 
         setInterval(() => {
-            if (num < backgrounds.length) {
+            if (num < backgrounds.length - 1) {
                 num++;
             }
 
-            homeEl.style.backgroundImage = `url(Images/${backgrounds[num - 1]}) , url(Images/${backgrounds[num]})`;
+            homeEl.style.backgroundImage = `url(../Images/${backgrounds[num]})`;
         }, 1000);
 
         siteLoaderEl.style.opacity = '0';
