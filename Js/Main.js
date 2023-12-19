@@ -23,7 +23,7 @@ const slideItems = document.querySelectorAll('.slide-item');
 const nextBtn = document.querySelector('.btn-next');
 const prevBtn = document.querySelector('.btn-prev');
 // form
-const formEl = document.querySelector('.contact-form');
+const formEl = document.querySelector('form');
 const formItems = document.querySelectorAll('.form-item:not(.input_submit)');
 const formSubmit = document.querySelector('input[type="submit"]');
 // show scroll up page
