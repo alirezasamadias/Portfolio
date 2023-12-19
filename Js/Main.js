@@ -34,18 +34,18 @@ homeContainer.style.display = 'none';
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
         // home background
-        // const backgrounds = ['Background-Home-01.jpg','Background-Home-02.jpg','Background-Home-03.jpg'];
+        const backgrounds = ['Background-Home-01.jpg','Background-Home-02.jpg','Background-Home-03.jpg'];
 
-        // let num = 0;
-        // homeEl.style.backgroundImage = `url(Images/${backgrounds[num]})`;
+        let num = 0;
+        homeEl.style.backgroundImage = `url(Images/${backgrounds[num]})`;
 
-        // setInterval(() => {
-        //     if (num < backgrounds.length) {
-        //         num++;
-        //     }
+        setInterval(() => {
+            if (num < backgrounds.length) {
+                num++;
+            }
 
-        //     homeEl.style.backgroundImage = `url(Images/${backgrounds[num - 1]}) , url(Images/${backgrounds[num]})`;
-        // }, 1000);
+            homeEl.style.backgroundImage = `url(Images/${backgrounds[num - 1]}) , url(Images/${backgrounds[num]})`;
+        }, 1000);
 
         siteLoaderEl.style.opacity = '0';
         siteLoaderEl.style.visibility = 'hidden';
