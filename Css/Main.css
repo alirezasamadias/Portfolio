@@ -349,7 +349,7 @@ img::before {
 /* home */
 .home {
     min-height: 100vh;
-    background: no-repeat center center fixed;
+    background: url(../Images/Background-Home-01.jpg) no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
@@ -941,7 +941,15 @@ textarea {
 
     .btn-prev,
     .btn-next {
-        display: none;
+        top: 80%;
+    }
+
+    .btn-next {
+        left: 85%;
+    }
+    
+    .btn-prev {
+        right: 85%;
     }
 
     .about-logos {
