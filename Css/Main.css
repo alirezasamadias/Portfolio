@@ -927,10 +927,6 @@ textarea {
         right: 85%;
     }
 
-    .about-logos {
-        margin-top: 0;
-    }
-
     .about-logo {
         width: calc(100% / 2);
     }
