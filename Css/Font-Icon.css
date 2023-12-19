@@ -23,38 +23,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-unlink:before {
+  content: "\f128";
+}
 .icon-menu:before {
-  content: "\e909";
-}
-.icon-close:before {
-  content: "\e908";
-}
-.icon-up:before {
-  content: "\e906";
-}
-.icon-down:before {
-  content: "\e900";
-}
-.icon-left:before {
   content: "\e901";
 }
-.icon-right::after {
-  content: "\e902";
+.icon-close:before {
+  content: "\e90a";
 }
-.icon-brush:before {
-  content: "\e905";
-}
-.icon-search:before {
+.icon-down:before {
   content: "\e903";
 }
-.icon-buoy:before {
+.icon-up:before {
   content: "\e904";
 }
+.icon-left:before {
+  content: "\e906";
+}
+.icon-right:before {
+  content: "\e907";
+}
 .icon-shopping:before {
-  content: "\e90b";
+  content: "\e93a";
+}
+.icon-brush:before {
+  content: "\e908";
 }
 .icon-tools:before {
-  content: "\e90e";
+  content: "\e909";
+}
+.icon-search:before {
+  content: "\e900";
+}
+.icon-buoy:before {
+  content: "\f1cd";
 }
 .icon-facebook:before {
   content: "\ea90";
