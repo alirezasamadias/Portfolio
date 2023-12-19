@@ -33,7 +33,7 @@
 }
 
 /* show element by rotate */
-@keyframes show-element_rotate {
+@keyframes show-rotate {
     0% , 100% {
         transform-origin: center bottom;
     }
@@ -48,7 +48,7 @@
 }
 
 /* show element by translate */
-@keyframes show-element-by-translate {
+@keyframes show-translate {
     0% {
         opacity: 0;
         transform: translateY(10%);
@@ -263,6 +263,16 @@ img::before {
     opacity: 0.7;
 }
 
+.btn-secondary {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: #fff;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
 /* show element */
 .show_scale {
     display: none;
@@ -277,7 +287,7 @@ img::before {
 
 .show_rotate {
     display: none;
-    animation: show-element_rotate 1.2s cubic-bezier(0.3, 0.885, 0.32, 1.35) forwards;
+    animation: show-rotate 1.2s cubic-bezier(0.3, 0.885, 0.32, 1.35) forwards;
 }
 
 /* HEADER */
@@ -349,7 +359,7 @@ img::before {
 .home .container {
     min-height: 100vh;
     row-gap: 10px;
-    animation: show-element-by-translate 1s linear;
+    animation: show-translate 1s linear;
 }
 
 .home-title {
@@ -358,21 +368,13 @@ img::before {
 }
 
 .home-content {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font: bold 18px / 1.5 'raleway-regular';
     color: #6b6b6b;
 }
 
-/* home btn */
-.btn-get-about {
-    margin-right: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-color: #fff;
-}
-
-.btn-get-contact {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+.home .btn {
+    margin: 10px;
 }
 
 /* scroll down */
@@ -386,7 +388,7 @@ img::before {
 }
 
 /* portfolio */
-.portfolio-title {
+.portfolio .container {
     display: block;
     padding: 70px 30px 80px;
 }
@@ -426,13 +428,9 @@ img::before {
     justify-content: space-around;
 }
 
-.inform-item {
-    min-width: 145px;
-    display: flex;
-    flex-direction: column;
-}
-
 .inform-num {
+    display: block;
+    min-width: 145px;
     font: 40px sans-serif;
 }
 
@@ -891,7 +889,7 @@ textarea {
         row-gap: 40px;
     }
 
-    .inform-item {
+    .inform-num {
         width: 100%;
     }
 

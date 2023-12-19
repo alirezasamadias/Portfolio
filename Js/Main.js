@@ -44,7 +44,7 @@ document.onreadystatechange = () => {
                 num++;
             }
 
-            homeEl.style.backgroundImage = `url(../Images/${backgrounds[num]})`
+            homeEl.style.backgroundImage = `url(../Images/${backgrounds[num]}) , url(../Images/${backgrounds[num - 1]})`;
         }, 1000);
 
         siteLoaderEl.style.opacity = '0';
