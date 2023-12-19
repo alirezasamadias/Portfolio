@@ -1,15 +1,15 @@
-/* START */
 /* Fonts */
 @font-face {
     font-family: 'raleway-regular';
-    src: url('../Fonts/Raleway/Raleway-Regular.eot');
-    src: url('../Fonts/Raleway/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../Fonts/Raleway/Raleway-Regular.woff2') format('woff2'),
-         url('../Fonts/Raleway/Raleway-Regular.woff') format('woff'),
-         url('../Fonts/Raleway/Raleway-Regular.ttf') format('truetype'),
-         url('../Fonts/Raleway/Raleway-Regular.svg#raleway') format('svg');
+    src: 
+        url('../Fonts/Raleway/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../Fonts/Raleway/Raleway-Regular.woff2') format('woff2'),
+        url('../Fonts/Raleway/Raleway-Regular.woff') format('woff'),
+        url('../Fonts/Raleway/Raleway-Regular.ttf') format('truetype'),
+        url('../Fonts/Raleway/Raleway-Regular.svg#raleway') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: block;
 }
 
 /* Animations */
