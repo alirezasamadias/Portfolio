@@ -1,6 +1,4 @@
-// START
 // site loader
-const bodyEl = document.querySelector('body');
 const siteLoaderEl = document.querySelector('.site-loader');
 const homeContainer = document.querySelector('.home .container');
 // header slide
@@ -32,12 +30,12 @@ const formSubmit = document.querySelector('input[type="submit"]');
 const scrollUpEl = document.querySelector('.scroll-up-page');
 
 // site loader
-homeEl.style.display = 'none';
+homeContainer.style.display = 'none';
 document.onreadystatechange = ()=>{
-    if (document.readyState == 'complete') {
+    if (document.readyState === 'complete') {
         siteLoaderEl.style.opacity = '0';
         siteLoaderEl.style.visibility = 'hidden';
-        homeEl.style.display = 'block';
+        homeContainer.style.display = 'flex';
 
         // home background
         const backgrounds = ['Background-Home-01.jpg','Background-Home-02.jpg','Background-Home-03.jpg'];

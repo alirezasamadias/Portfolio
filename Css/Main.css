@@ -734,15 +734,15 @@ textarea {
     opacity: 1;
 }
 
-.icon-twitter:hover {
+.footer-icon.icon-twitter:hover {
     background-color: var(--primary-color);
 }
 
-.icon-facebook:hover {
+.footer-icon.icon-facebook:hover {
     background-color: royalblue;
 }
 
-.icon-dribbble:hover {
+.footer-icon.icon-dribbble:hover {
     background-color: hotpink;
 }
 
