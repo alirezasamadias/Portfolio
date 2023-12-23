@@ -581,7 +581,7 @@ img::before {
 }
 
 .contact .line-bottom::after {
-    background-color: #fff;
+    border-top-color: #fff;
 }
 
 /* contact form */
